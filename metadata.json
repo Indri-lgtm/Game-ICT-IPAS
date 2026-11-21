@@ -1,0 +1,8 @@
+{
+  "name": "Petualangan Peran & Tugasku",
+  "description": "Game edukasi interaktif IPS/IPAS Kelas 4 SD Bab 6 Topik A: Mengenal peran dan tugas di lingkungan sekolah dan masyarakat.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

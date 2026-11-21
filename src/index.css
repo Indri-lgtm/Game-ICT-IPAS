@@ -1,0 +1,262 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Fredoka', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom Animations for Petualangan Peran & Tugasku */
+@keyframes floatCloudSlow {
+  0% { transform: translateX(-12%); }
+  100% { transform: translateX(112%); }
+}
+
+@keyframes floatCloudReverse {
+  0% { transform: translateX(110%); }
+  100% { transform: translateX(-15%); }
+}
+
+@keyframes birdFly {
+  0% { transform: translate(-10vw, 10px) scale(0.85); opacity: 0; }
+  10% { opacity: 1; }
+  50% { transform: translate(45vw, -18px) scale(1); }
+  90% { opacity: 1; }
+  100% { transform: translate(105vw, 6px) scale(0.9); opacity: 0; }
+}
+
+@keyframes sunSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes characterBreathe {
+  0%, 100% { transform: scaleY(1) translateY(0); }
+  50% { transform: scaleY(1.03) translateY(-1.5px); }
+}
+
+@keyframes characterBlink {
+  0%, 92%, 100% { transform: scaleY(1); }
+  96% { transform: scaleY(0.1); }
+}
+
+@keyframes handWave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-18deg); }
+  75% { transform: rotate(16deg); }
+}
+
+@keyframes flagWave {
+  0%, 100% { transform: skewY(0deg) scaleX(1); }
+  50% { transform: skewY(4deg) scaleX(0.95); }
+}
+
+@keyframes windmillSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes sweepSwing {
+  0%, 100% { transform: rotate(-14deg); }
+  50% { transform: rotate(18deg); }
+}
+
+@keyframes waterDrop {
+  0% { transform: translateY(0) scale(0.9); opacity: 0.9; }
+  100% { transform: translateY(22px) scale(0.6); opacity: 0; }
+}
+
+@keyframes armRaise {
+  0%, 100% { transform: rotate(0deg) translateY(0); }
+  50% { transform: rotate(-14deg) translateY(-4px); }
+}
+
+@keyframes hoeSwing {
+  0%, 100% { transform: rotate(-12deg); }
+  50% { transform: rotate(24deg); }
+}
+
+@keyframes scaleTilt {
+  0%, 100% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+}
+
+@keyframes lipSync {
+  0%, 100% { transform: scaleY(0.35); }
+  50% { transform: scaleY(1.15); }
+}
+
+@keyframes joyBounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  40% { transform: translateY(-16px) scale(1.05); }
+  60% { transform: translateY(-12px) scale(1.03); }
+}
+
+@keyframes confettiFall {
+  0% { transform: translateY(-20px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(420px) rotate(520deg); opacity: 0; }
+}
+
+@keyframes starFlyUp {
+  0% { transform: translate(0, 0) scale(1); opacity: 1; }
+  100% { transform: translate(160px, -240px) scale(0.35); opacity: 0; }
+}
+
+@keyframes fireworkBurst {
+  0% { transform: scale(0.2); opacity: 0.95; }
+  70% { transform: scale(1.25); opacity: 0.85; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+@keyframes gentlePulseRing {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.12); opacity: 0.25; }
+}
+
+.animate-cloud-slow {
+  animation: floatCloudSlow 46s linear infinite;
+}
+
+.animate-cloud-reverse {
+  animation: floatCloudReverse 58s linear infinite;
+}
+
+.animate-bird {
+  animation: birdFly 16s linear infinite;
+}
+
+.animate-sun-spin {
+  animation: sunSpin 36s linear infinite;
+}
+
+.animate-breathe {
+  transform-origin: bottom center;
+  animation: characterBreathe 2.8s ease-in-out infinite;
+}
+
+.animate-blink {
+  transform-origin: center;
+  animation: characterBlink 4.2s ease-in-out infinite;
+}
+
+.animate-wave {
+  transform-origin: 80% 80%;
+  animation: handWave 1.4s ease-in-out infinite;
+}
+
+.animate-flag {
+  transform-origin: left center;
+  animation: flagWave 2.1s ease-in-out infinite;
+}
+
+.animate-windmill {
+  transform-origin: center;
+  animation: windmillSpin 7s linear infinite;
+}
+
+.animate-sweep {
+  transform-origin: top center;
+  animation: sweepSwing 1.1s ease-in-out infinite;
+}
+
+.animate-water {
+  animation: waterDrop 1.2s ease-in infinite;
+}
+
+.animate-arm-raise {
+  transform-origin: bottom center;
+  animation: armRaise 1.6s ease-in-out infinite;
+}
+
+.animate-hoe {
+  transform-origin: top left;
+  animation: hoeSwing 1.3s ease-in-out infinite;
+}
+
+.animate-scale {
+  transform-origin: center;
+  animation: scaleTilt 2s ease-in-out infinite;
+}
+
+.animate-lipsync {
+  transform-origin: center;
+  animation: lipSync 0.28s ease-in-out infinite;
+}
+
+.animate-joy-bounce {
+  animation: joyBounce 1.1s ease-in-out infinite;
+}
+
+.animate-pulse-ring {
+  animation: gentlePulseRing 2s ease-in-out infinite;
+}
+
+/* 3D Card Flip Helpers */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* 3D Glossy Capsule Button */
+.btn-3d-teal {
+  box-shadow: 0 7px 0 #0F766E, 0 14px 24px rgba(13, 148, 136, 0.35);
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-3d-teal:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 9px 0 #0F766E, 0 18px 28px rgba(13, 148, 136, 0.42);
+}
+.btn-3d-teal:active {
+  transform: translateY(4px);
+  box-shadow: 0 3px 0 #0F766E, 0 6px 12px rgba(13, 148, 136, 0.25);
+}
+
+.btn-3d-amber {
+  box-shadow: 0 6px 0 #B45309, 0 10px 20px rgba(217, 119, 6, 0.28);
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-3d-amber:hover {
+  transform: translateY(-2px);
+}
+.btn-3d-amber:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #B45309;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media print {
+  body {
+    background: #FFFFFF !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only-area {
+    box-shadow: none !important;
+    border: 4px solid #F59E0B !important;
+  }
+}
